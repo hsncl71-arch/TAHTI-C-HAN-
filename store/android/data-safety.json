@@ -1,0 +1,17 @@
+{
+  "applicationId": "com.tahticihan.app",
+  "appName": "TAHT-I CİHAN",
+  "dataShared": false,
+  "dataEncryptedInTransit": true,
+  "usersCanRequestDeletion": true,
+  "deletionUrl": "/hesap",
+  "collected": [
+    { "type": "email", "purpose": "account", "optional": false },
+    { "type": "user_id", "purpose": "account", "optional": false },
+    { "type": "gameplay", "purpose": "app_functionality", "optional": false }
+  ],
+  "securityPractices": {
+    "dataEncryptedInTransit": true,
+    "canRequestDeletion": true
+  }
+}

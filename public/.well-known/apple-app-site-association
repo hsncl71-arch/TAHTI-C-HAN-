@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TEAMID.com.tahticihan.app",
+        "paths": ["/oyun*", "/login*", "/meydan*", "/"]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["TEAMID.com.tahticihan.app"]
+  }
+}

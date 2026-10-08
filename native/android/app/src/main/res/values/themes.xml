@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.TahtiCihan" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:statusBarColor">@color/ink</item>
+        <item name="android:navigationBarColor">@color/ink</item>
+        <item name="android:windowBackground">@color/ink</item>
+        <item name="android:colorPrimary">@color/gilt</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+    <style name="Theme.TahtiCihan.Splash" parent="Theme.TahtiCihan">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+</resources>

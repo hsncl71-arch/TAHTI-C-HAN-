@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LS1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <scenes>
+        <scene sceneID="s1">
+            <objects>
+                <viewController id="LS1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LSV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="TAHT-I CİHAN" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBL">
+                                <rect key="frame" x="20" y="430" width="374" height="36"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="28"/>
+                                <color key="textColor" red="0.769" green="0.647" blue="0.455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.047" green="0.039" blue="0.031" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LBL" firstAttribute="centerX" secondItem="LSV" secondAttribute="centerX" id="c1"/>
+                            <constraint firstItem="LBL" firstAttribute="centerY" secondItem="LSV" secondAttribute="centerY" id="c2"/>
+                            <constraint firstItem="LBL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LSV" secondAttribute="leading" constant="20" id="c3"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

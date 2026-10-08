@@ -1,0 +1,48 @@
+{
+  "displayName": "TAHT-I CİHAN",
+  "bundleId": "com.tahticihan.app",
+  "applicationId": "com.tahticihan.app",
+  "versionName": "1.0.0",
+  "versionCode": 1,
+  "ageRating": {
+    "iarc": "12+",
+    "pegi": "12",
+    "esrb": "T",
+    "notes": "Historical war, implied adult palace life with fade-to-black. No graphic sexual content. Children excluded from romance."
+  },
+  "multiplayer": true,
+  "userCommunication": true,
+  "reportingAndBlocking": true,
+  "subscriptionDisclosure": "/magaza",
+  "privacy": "/gizlilik",
+  "terms": "/kosullar",
+  "accountDeletion": "/hesap",
+  "ownerEmail": "zunozaofficial@gmail.com",
+  "appleDeveloper": "account_exists_team_id_not_in_repo",
+  "remaining": {
+    "ios": {
+      "signInWithApple": "code_ready_needs_APPLE_CLIENT_ID_and_APPLE_CLIENT_SECRET_and_capability_on_app_id",
+      "pushApns": "http2_transport_ready_needs_APNS_KEY_ID_APNS_TEAM_ID_APNS_PRIVATE_KEY",
+      "storeKitLive": "app_store_server_api_ready_needs_products_and_APPLE_ISSUER_ID_KEY_ID_PRIVATE_KEY",
+      "signing": "set_DEVELOPMENT_TEAM_and_ExportOptions_teamID_then_archive_on_mac",
+      "webOrigin": "set_TAHT_WEB_ORIGIN_in_Config.xcconfig",
+      "universalLinks": "replace_TEAMID_in_public_.well-known_apple-app-site-association",
+      "testflight": "user_action_mac_xcode_archive"
+    },
+    "android": {
+      "googleLogin": "broker_google_works_in_web_play_sha1_of_upload_cert_needed",
+      "fcmPush": "http_transport_and_android_reflection_bridge_ready_needs_FIREBASE_SERVICE_ACCOUNT_or_FCM_SERVER_KEY_and_google-services.json",
+      "playBillingLive": "play_developer_api_ready_needs_play_console_products_and_GOOGLE_PLAY_SERVICE_ACCOUNT",
+      "keystore": "run_native/android/scripts/create-upload-keystore.sh",
+      "webOrigin": "set_taht.web.origin_in_gradle.properties",
+      "appLinks": "replace_SHA256_in_public_.well-known_assetlinks.json",
+      "signedAab": "user_action_bundleRelease_after_keystore"
+    },
+    "turn": {
+      "status": "provider_agnostic_ready",
+      "env": "TURN_URLS + TURN_SECRET (coturn REST) or TURN_USERNAME + TURN_CREDENTIAL",
+      "withoutSecrets": "stun_only_reported_honestly"
+    },
+    "twoAccountE2E": "not_executed_needs_two_human_logins"
+  }
+}

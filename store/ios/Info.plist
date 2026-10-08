@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleDisplayName</key>
+  <string>TAHT-I CİHAN</string>
+  <key>CFBundleName</key>
+  <string>TAHT-I CİHAN</string>
+  <key>CFBundleIdentifier</key>
+  <string>com.tahticihan.app</string>
+  <key>CFBundleShortVersionString</key>
+  <string>1.0.0</string>
+  <key>CFBundleVersion</key>
+  <string>1</string>
+  <key>LSRequiresIPhoneOS</key>
+  <true/>
+  <key>UILaunchScreen</key>
+  <dict>
+    <key>UIColorName</key>
+    <string>Ink</string>
+  </dict>
+  <key>UISupportedInterfaceOrientations</key>
+  <array>
+    <string>UIInterfaceOrientationPortrait</string>
+    <string>UIInterfaceOrientationLandscapeLeft</string>
+    <string>UIInterfaceOrientationLandscapeRight</string>
+  </array>
+  <key>NSUserTrackingUsageDescription</key>
+  <string>Takip etmiyoruz. Bu metin App Store formu içindir.</string>
+  <key>ITSAppUsesNonExemptEncryption</key>
+  <false/>
+  <key>CFBundleURLTypes</key>
+  <array>
+    <dict>
+      <key>CFBundleURLName</key>
+      <string>com.tahticihan.app</string>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>tahticihan</string>
+      </array>
+    </dict>
+  </array>
+  <key>UIBackgroundModes</key>
+  <array>
+    <string>remote-notification</string>
+  </array>
+</dict>
+</plist>

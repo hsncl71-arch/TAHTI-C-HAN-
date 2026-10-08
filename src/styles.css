@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --color-ink: #0c0a08;
+  --color-marble: #14110e;
+  --color-panel: #1c1814;
+  --color-raised: #241f19;
+  --color-ivory: #e8dcc4;
+  --color-silk: #9a8b72;
+  --color-crimson: #8a1f1a;
+  --color-gilt: #c4a574;
+  --color-line: #3a3228;
+  --color-paper: #d7cbb3;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-ink);
+    color: var(--color-ivory);
+  }
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    min-height: 100svh;
+    background: var(--color-ink);
+    color: var(--color-ivory);
+    font-family: var(--font-sans);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  input, textarea, select {
+    font-size: 16px;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.03em;
+  }
+  p { text-wrap: pretty; }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  img {
+    outline: 1px solid color-mix(in oklab, var(--color-ivory) 10%, transparent);
+    outline-offset: -1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.vignette {
+  box-shadow: inset 0 0 80px 24px var(--color-ink);
+}
+
+.hairline {
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-gilt) 35%, transparent);
+}
+
+.timeline-rail {
+  border-left: 1px solid color-mix(in oklab, var(--color-gilt) 40%, transparent);
+}
+
+.palace-theme-night .scene-layer {
+  filter: saturate(0.82) brightness(0.78) hue-rotate(-12deg);
+}
+.palace-theme-dawn .scene-layer {
+  filter: saturate(1.12) brightness(1.06) sepia(0.18);
+}
+.portrait-actor-frame.is-young img {
+  filter: saturate(1.06) brightness(1.04);
+}
+.portrait-actor-frame.is-prime img {
+  filter: contrast(1.02) saturate(1);
+}
+.portrait-actor-frame.is-mature img {
+  filter: contrast(1.04) saturate(0.94);
+}
+.portrait-actor-frame.is-elder img {
+  filter: contrast(1.08) saturate(0.78) sepia(0.16) brightness(0.92);
+}
+
+html.motion-reduce *,
+html.motion-reduce *::before,
+html.motion-reduce *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+html.motion-reduce .portrait-actor-frame,
+html.motion-reduce .portrait-actor-frame.is-speaking img,
+html.motion-reduce .siege-kenburns,
+html.motion-reduce .intimate-fade {
+  animation: none !important;
+}
+
+html.gfx-low .scene-layer {
+  filter: saturate(0.78) contrast(0.96);
+}
+html.gfx-low video {
+  display: none !important;
+}
+html.gfx-low .siege-kenburns,
+html.gfx-low .intimate-fade {
+  animation: none !important;
+}
+html.gfx-medium .scene-layer {
+  filter: contrast(1.02) saturate(1.02);
+}
+html.gfx-high .scene-layer {
+  filter: contrast(1.08) saturate(1.1);
+}
+
+.portrait-actor-frame.is-speaking img {
+  animation: speak-breath 2.4s ease-in-out infinite;
+}
+@keyframes speak-breath {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.012); }
+}
+html.gfx-low .portrait-actor-frame.is-speaking img {
+  animation: none;
+}
+
+.robe-night {
+  box-shadow: inset 0 -2.5rem 2.2rem color-mix(in oklab, var(--color-ink) 55%, transparent);
+}
+.robe-crimson {
+  box-shadow: inset 0 -2.5rem 2.2rem color-mix(in oklab, var(--color-crimson) 48%, transparent);
+}
+.robe-ivory {
+  box-shadow: inset 0 -2.5rem 2.2rem color-mix(in oklab, var(--color-ivory) 38%, transparent);
+}
+.banner-tugh .banner-mark {
+  filter: drop-shadow(0 0 8px color-mix(in oklab, var(--color-gilt) 70%, transparent));
+}
+.banner-hilal .banner-mark {
+  color: var(--color-paper);
+}
+
+@keyframes palace-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.015); }
+}
+
+@keyframes palace-talk {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.07); }
+}
+
+.portrait-actor-frame {
+  animation: palace-breathe 5.5s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.portrait-actor-frame.is-speaking {
+  animation: palace-breathe 5.5s ease-in-out infinite, palace-talk 0.85s ease-in-out infinite;
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-gilt) 55%, transparent);
+}
+
+@keyframes intimate-veil {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.intimate-fade {
+  background: #050403;
+  animation: intimate-veil 1.1s ease-in forwards;
+}
+
+@keyframes siege-kenburns {
+  0% { transform: scale(1) translate3d(0, 0, 0); }
+  100% { transform: scale(1.06) translate3d(0, -1.5%, 0); }
+}
+
+.siege-kenburns {
+  animation: siege-kenburns 7s ease-out forwards;
+  transform-origin: center center;
+}
+
